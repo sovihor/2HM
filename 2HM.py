@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://hdmn.cloud/ru/demo/'
+url = 'https://hide.mn/en/demo/'
 
 # Попытка получить страницу и проверить статус ответа
 try:
@@ -8,11 +8,11 @@ try:
     
     # Проверка на успешный ответ от сервера
     if response.status_code == 200:
-        # Если текст на странице содержит "Ваша электронная почта", продолжаем
-        if 'Ваша электронная почта' in response.text:
+        # Если текст на странице содержит "Your email", продолжаем
+        if 'Your email' in response.text:
             email = input('Введите электронную почту для получения тестового периода: ')
 
-            response = requests.post('https://hdmn.cloud/ru/demo/success/', data={
+            response = requests.post('https://hide.mn/en/demo/success/', data={
                 "demo_mail": f"{email}"
             })
 
