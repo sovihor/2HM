@@ -16,7 +16,7 @@ try:
                 "demo_mail": f"{email}"
             })
 
-            if 'Ваш код выслан на почту' in response.text:
+            if 'Your code has been sent to your email address' in response.text:
                 print('✅ \033[1;32mВаш код уже в пути!\033[0m Проверьте свой почтовый ящик.')
             else:
                 print('⚠️ \033[1;31mУказанная почта не подходит для получения тестового периода.\033[0m')
